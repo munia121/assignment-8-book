@@ -6,13 +6,36 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import MainLayOut from './MainLayOut/MainLayOut';
+import Home from './Pages/Home';
+import ListedBooks from './Pages/ListedBooks';
+import ReadPages from './Pages/ReadPages';
+import Cards from './Components/Cards';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayOut></MainLayOut>,
-    
+    children:[
+      {
+        path:'/',
+        element:<Home></Home>,
+      },
+      {
+        path:'/listedBook',
+        element:<ListedBooks></ListedBooks>
+      },
+      {
+        path:'/readPage',
+        element:<ReadPages></ReadPages>
+      },
+      {
+        path:'/cards',
+        element:<Cards></Cards>,
+        loader:fetch('/data.json')
+      }
+    ]
+
   },
 ]);
 
