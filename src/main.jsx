@@ -10,6 +10,11 @@ import Home from './Pages/Home';
 import ListedBooks from './Pages/ListedBooks';
 import ReadPages from './Pages/ReadPages';
 import Cards from './Components/Cards';
+import SingCard from './Components/SingCard';
+import CardDetails from './Pages/CardDetails';
+import Books from './Components/Books';
+import ReadBooks from './Components/ReadBooks';
+import WhishListBooks from './Components/WhishListBooks';
 
 
 const router = createBrowserRouter([
@@ -21,19 +26,34 @@ const router = createBrowserRouter([
         path:'/',
         element:<Home></Home>,
       },
-      {
-        path:'/listedBook',
-        element:<ListedBooks></ListedBooks>
-      },
+     
       {
         path:'/readPage',
         element:<ReadPages></ReadPages>
       },
+      
       {
-        path:'/cards',
-        element:<Cards></Cards>,
-        loader:fetch('/data.json')
+        path:'/listedbooks',
+        element:<ListedBooks></ListedBooks>,
+        loader:()=>fetch('/data.json'),
+        children:[
+          {
+            index:true,
+            element:<ReadBooks></ReadBooks>,
+            
+          },
+          {
+            path:'whishList',
+            element:<WhishListBooks></WhishListBooks>
+          }
+        ]
+      },
+      {
+        path:'/cardDetails/:id',
+        element:<CardDetails></CardDetails>,
+        loader:()=> fetch('/data.json')
       }
+     
     ]
 
   },

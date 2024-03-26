@@ -21,7 +21,7 @@ const NavBar = () => {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1   flex gap-10">
                         <NavLink to={'/'}  className={({isActive}) => isActive? 'text-[#23BE0A] border border-[#23BE0A] font-bold px-6 py-3 rounded-md ' : 'font-bold text-black'}><li>Home</li></NavLink>
-                        <NavLink to={'/listedBook'}  className={({isActive}) => isActive? 'text-[#23BE0A] border border-[#23BE0A] font-bold px-6 py-3 rounded-md ' : 'font-bold text-black'}><li>Listed Books</li></NavLink>
+                        <NavLink to={'/listedbooks'}  className={({isActive}) => isActive? 'text-[#23BE0A] border border-[#23BE0A] font-bold px-6 py-3 rounded-md ' : 'font-bold text-black'}><li>Listed Books</li></NavLink>
                         <NavLink to={'/readPage'}  className={({isActive}) => isActive? 'text-[#23BE0A] border border-[#23BE0A] font-bold px-6 py-3 rounded-md ' : 'font-bold text-black'}><li>Pages to Read</li></NavLink>
                         
                     </ul>

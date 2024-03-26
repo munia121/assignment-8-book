@@ -1,6 +1,6 @@
 [
     {
-      "bookId": "1",
+      "id": 1,
       "bookName": "The Book Of Life",
       "author": "George Orwell",
       "image": "https://i.ibb.co/MGmJN65/97cd56f19ff86dfe027ecac5cb1ba5cf.jpg",
@@ -13,7 +13,7 @@
       "yearOfPublishing": 1949
     },
     {
-      "bookId": "2",
+      "id": 2,
       "bookName": "To Kill a Mockingbird",
       "author": "Harper Lee",
       "image": "https://i.ibb.co/2jHbk2B/a-copy-of-harper-lees-to-kill-a-mockingbird-the-book-is-on-many-schools-banned-books-lists-in-the-us.jpg",
@@ -26,7 +26,7 @@
       "yearOfPublishing": 1960
     },
     {
-      "bookId": "3",
+      "id": 3,
       "bookName": "The Great Gatsby",
       "author": "F. Scott Fitzgerald",
       "image": "https://i.ibb.co/dWmwrCj/81a-Ypgo-QPFL-AC-UF350-350-QL80.jpg",
@@ -39,7 +39,7 @@
       "yearOfPublishing": 1925
     },
     {
-      "bookId": "4",
+      "id": 4,
       "bookName": "The Catcher in the Rye",
       "author": "J.D. Salinger",
       "image": "https://i.ibb.co/THH6Vfn/1918-3.webp",
@@ -52,7 +52,7 @@
       "yearOfPublishing": 1951
     },
     {
-      "bookId": "5",
+      "id": 5,
       "bookName": "Gone Girl",
       "author": "Gillian Flynn",
       "image": "https://i.ibb.co/RHX6cyg/posiano-1.jpg",
@@ -65,7 +65,7 @@
       "yearOfPublishing": 2012
     },
     {
-      "bookId": "6",
+      "id": 6,
       "bookName": "The Handmaid's Tale",
       "author": "Margaret Atwood",
       "image": "https://i.ibb.co/DfzLWhG/images-7.jpg",
