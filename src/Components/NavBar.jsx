@@ -23,6 +23,8 @@ const NavBar = () => {
                         <NavLink to={'/'}  className={({isActive}) => isActive? 'text-[#23BE0A] border border-[#23BE0A] font-bold px-6 py-3 rounded-md ' : 'font-bold text-black'}><li>Home</li></NavLink>
                         <NavLink to={'/listedbooks'}  className={({isActive}) => isActive? 'text-[#23BE0A] border border-[#23BE0A] font-bold px-6 py-3 rounded-md ' : 'font-bold text-black'}><li>Listed Books</li></NavLink>
                         <NavLink to={'/readPage'}  className={({isActive}) => isActive? 'text-[#23BE0A] border border-[#23BE0A] font-bold px-6 py-3 rounded-md ' : 'font-bold text-black'}><li>Pages to Read</li></NavLink>
+                        <NavLink to={'writing'} className={({isActive}) => isActive? 'text-[#23BE0A] border border-[#23BE0A] font-bold px-6 py-3 rounded-md ' : 'font-bold text-black'}><li>Writing</li></NavLink>
+                        <NavLink to={'marketing'} className={({isActive}) => isActive? 'text-[#23BE0A] border border-[#23BE0A] font-bold px-6 py-3 rounded-md ' : 'font-bold text-black'}><li>Marketing</li></NavLink>
                         
                     </ul>
                 </div>

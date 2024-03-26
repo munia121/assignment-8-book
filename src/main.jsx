@@ -9,14 +9,13 @@ import MainLayOut from './MainLayOut/MainLayOut';
 import Home from './Pages/Home';
 import ListedBooks from './Pages/ListedBooks';
 import ReadPages from './Pages/ReadPages';
-import Cards from './Components/Cards';
-import SingCard from './Components/SingCard';
 import CardDetails from './Pages/CardDetails';
-import Books from './Components/Books';
 import ReadBooks from './Components/ReadBooks';
 import WhishListBooks from './Components/WhishListBooks';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import ErrorPage from './Pages/ErrorPage';
+import Marketing from './Components/Marketing';
+import Writing from './Components/Writing';
 
 
 
@@ -36,6 +35,14 @@ const router = createBrowserRouter([
       {
         path:'/readPage',
         element:<ReadPages></ReadPages>
+      },
+      {
+        path:'/marketing',
+        element:<Marketing></Marketing>
+      },
+      {
+        path:'/writing',
+        element:<Writing></Writing>
       },
       
       {
