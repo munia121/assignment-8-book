@@ -9,6 +9,7 @@ const CardDetails = () => {
     let card = cards.find(card => card.id === idInt);
     const { author, bookName, category, image, publisher, rating, review, tags, totalPages, yearOfPublishing } = card;
 
+
     const handleReadListBooks = (book) =>{
         saveStoredList(book)
     }
@@ -20,12 +21,11 @@ const CardDetails = () => {
 
 
 
-
     return (
         <div>
-            <div className="hero min-h-screen bg-base-200 mt-20">
+            <div className="hero lg:min-h-screen bg-base-200 lg:mt-20">
                 <div className="hero-content gap-10 flex-col lg:flex-row">
-                    <img src={image} className="max-w-lg h-[600px] rounded-lg shadow-2xl" />
+                    <img src={image} className="lg:max-w-lg lg:h-[600px] rounded-lg shadow-2xl" />
                     <div className="space-y-4">
                         <h1 className="text-4xl font-bold">{bookName}</h1>
                         <p className="text-xl">By: {author}</p>

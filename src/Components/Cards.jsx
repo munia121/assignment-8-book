@@ -16,7 +16,7 @@ const Cards = () => {
     return (
         <div className="mt-28">
             <h1 className="text-center text-3xl font-bold">Books</h1>
-            <div className="grid grid-cols-3 gap-10 mt-8">
+            <div className="grid lg:grid-cols-3 gap-10 mt-8">
                 {
                     cards?.map(card=><SingCard key={card.id} card={card}></SingCard>)
                 }
