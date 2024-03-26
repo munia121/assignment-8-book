@@ -4,8 +4,10 @@ import { Link, useParams } from "react-router-dom";
 
 
 const SingCard = ({card,}) => {
+    // eslint-disable-next-line no-unused-vars
     const {author,id,bookName,category,image,publisher,rating,review,tags,totalPages,yearOfPublishing} = card;
     
+    // eslint-disable-next-line no-unused-vars
     const {ids} =useParams()
 
     return (

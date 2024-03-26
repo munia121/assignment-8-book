@@ -3,11 +3,7 @@
 import { IoLocationOutline } from "react-icons/io5";
 import { AiOutlineUsergroupDelete } from "react-icons/ai";
 import { MdOutlineContactPage } from "react-icons/md";
-
-
-
-
-const ReadBooksCard = ({ book }) => {
+const WishCard = ({book}) => {
     // eslint-disable-next-line no-unused-vars
     const { author, bookName, category, image, publisher, rating, review, tags, totalPages, yearOfPublishing } = book
     return (
@@ -40,4 +36,4 @@ const ReadBooksCard = ({ book }) => {
     );
 };
 
-export default ReadBooksCard;
+export default WishCard;

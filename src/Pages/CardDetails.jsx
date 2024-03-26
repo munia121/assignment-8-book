@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-key */
 import { useLoaderData, useParams } from "react-router-dom";
-import { saveStoredList } from "../Components";
+import { saveStoredList, saveWishList } from "../Components";
 
 const CardDetails = () => {
     const cards = useLoaderData()
@@ -12,8 +12,10 @@ const CardDetails = () => {
     const handleReadListBooks = (book) =>{
         saveStoredList(book)
     }
+
+
     const handleWishedListBook = (book) =>{
-        saveStoredList(book)
+        saveWishList(book)
     }
 
 
