@@ -1,3 +1,7 @@
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 export const getStoredList = () =>{
     const storedList = localStorage.getItem('books');
     if(storedList){
@@ -10,9 +14,9 @@ export const saveStoredList = (book) =>{
     const storedList = getStoredList();
     const exists = storedList.find(b => b.id === book.id);
     if(exists){
-        return alert('alrady exist')
+        return toast.warn('already exist')
     }
     storedList.push(book);
     localStorage.setItem('books',JSON.stringify(storedList))
-    // alert('added')
+    toast.success('Add Read books')
 }

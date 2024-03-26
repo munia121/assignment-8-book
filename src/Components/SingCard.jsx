@@ -3,7 +3,7 @@ import { CiStar } from "react-icons/ci";
 import { Link, useParams } from "react-router-dom";
 
 
-const SingCard = ({card,book}) => {
+const SingCard = ({card,}) => {
     const {author,id,bookName,category,image,publisher,rating,review,tags,totalPages,yearOfPublishing} = card;
     
     const {ids} =useParams()

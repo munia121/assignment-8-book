@@ -15,12 +15,18 @@ import CardDetails from './Pages/CardDetails';
 import Books from './Components/Books';
 import ReadBooks from './Components/ReadBooks';
 import WhishListBooks from './Components/WhishListBooks';
+import { ToastContainer, toast } from 'react-toastify';
+import ErrorPage from './Pages/ErrorPage';
+
+
+
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayOut></MainLayOut>,
+    errorElement:<ErrorPage></ErrorPage>,
     children:[
       {
         path:'/',
@@ -62,5 +68,6 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
+    <ToastContainer></ToastContainer>
   </React.StrictMode>,
 )

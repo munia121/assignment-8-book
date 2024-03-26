@@ -1,7 +1,6 @@
 /* eslint-disable react/jsx-key */
 import { useEffect, useState } from "react";
 import { getStoredList } from ".";
-import SingCard from "./SingCard";
 import ReadBooksCard from "./ReadBooksCard";
 
 const ReadBooks = () => {

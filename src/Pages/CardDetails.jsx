@@ -9,9 +9,14 @@ const CardDetails = () => {
     let card = cards.find(card => card.id === idInt);
     const { author, bookName, category, image, publisher, rating, review, tags, totalPages, yearOfPublishing } = card;
 
-    const handleListBooks = (book) =>{
+    const handleReadListBooks = (book) =>{
         saveStoredList(book)
     }
+    const handleWishedListBook = (book) =>{
+        saveStoredList(book)
+    }
+
+
 
 
     return (
@@ -35,8 +40,8 @@ const CardDetails = () => {
                             <p className="">Rating: <span className="ml-28">{rating}</span></p>
                         </div>
                         <div className="flex gap-7">
-                            <button onClick={()=>handleListBooks(card)} className="btn border border-gray-300 px-6 ">Read</button>
-                            <button className="btn bg-[#50B1C9] text-white px-7">Wishlist</button>
+                            <button onClick={()=>handleReadListBooks(card)} className="btn border border-gray-300 px-6 ">Read</button>
+                            <button onClick={()=>handleWishedListBook(card)} className="btn bg-[#50B1C9] text-white px-7">Wishlist</button>
                         </div>
                     </div>
                 </div>
