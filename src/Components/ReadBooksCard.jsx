@@ -9,6 +9,7 @@ import { Link, useParams } from "react-router-dom";
 
 
 const ReadBooksCard = ({ book }) => {
+    // eslint-disable-next-line no-unused-vars
     const {ids} =useParams()
     // eslint-disable-next-line no-unused-vars
     const {id, author, bookName, category, image, publisher, rating, review, tags, totalPages, yearOfPublishing } = book
