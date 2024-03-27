@@ -1,22 +1,22 @@
 /* eslint-disable react/prop-types */
-import  { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
-import { BarChart, Bar,  XAxis, YAxis } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer } from 'recharts';
 import { getStoredList } from '../Components';
 
 
 const ReadPages = () => {
-   
+
     const readPageData = useLoaderData()
     const [localData, setLocalData] = useState([])
-   
+
     console.log(localData)
 
-    useEffect(()=>{
+    useEffect(() => {
         const storedData = getStoredList();
-        const filter =storedData.filter(book=> getStoredList(book))
+        const filter = storedData.filter(book => getStoredList(book))
         setLocalData(filter)
-    },[readPageData])
+    }, [readPageData])
 
 
 
@@ -42,12 +42,15 @@ const ReadPages = () => {
 
     return (
         <div className='flex justify-center mt-20'>
-            <BarChart width={1000} height={300} data={localData}>
-                <XAxis dataKey="bookName"  />
-                <YAxis />
-                <Bar dataKey="totalPages" fill="#8884d8"
-                    shape={<TriangleBar />} />
-            </BarChart>
+            {/* <ResponsiveContainer width={'100% '} height={'100%'}> */}
+                <BarChart width={800} height={300} data={localData}>
+                    <XAxis dataKey="bookName" />
+                    <YAxis />
+                    <Bar dataKey="totalPages" fill="#8884d8"
+                        shape={<TriangleBar />} />
+                </BarChart>
+            {/* </ResponsiveContainer> */}
+
         </div>
     );
 };

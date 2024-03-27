@@ -3,14 +3,15 @@
 import { IoLocationOutline } from "react-icons/io5";
 import { AiOutlineUsergroupDelete } from "react-icons/ai";
 import { MdOutlineContactPage } from "react-icons/md";
+import { Link, useParams } from "react-router-dom";
 
 
 
 
 const ReadBooksCard = ({ book }) => {
-    
+    const {ids} =useParams()
     // eslint-disable-next-line no-unused-vars
-    const { author, bookName, category, image, publisher, rating, review, tags, totalPages, yearOfPublishing } = book
+    const {id, author, bookName, category, image, publisher, rating, review, tags, totalPages, yearOfPublishing } = book
     return (
         <div className="p-4">
             <div className=" border border-gray-300 mt-10 rounded-lg">
@@ -32,7 +33,7 @@ const ReadBooksCard = ({ book }) => {
                         <div className="lg:flex gap-5 space-y-4 lg:space-y-0">
                             <button className="btn rounded-full bg-[#cee0f5]  text-[#328EFF]">Category: {category} </button>
                             <button className="btn rounded-full bg-[#efddc3]  text-[#FFAC33]">Rating: {rating} </button>
-                            <button className="btn rounded-full bg-[#23BE0A]  text-white">View Details </button>
+                            <Link to={`/cardDetails/${id}`}><button className="btn rounded-full bg-[#23BE0A]  text-white">View Details </button></Link>
                         </div>
                     </div>
                 </div>

@@ -5,22 +5,23 @@ import { useEffect, useState } from "react";
 
 const ListedBooks = () => {
     
-    // const [books, setBooks] = useState([]);
+    const [books, setBooks] = useState([]);
     
     
     
-    // useEffect(() => {
-    //     const cards = getStoredList();
-    //     setBooks(cards)
-    // }, [])
+    useEffect(() => {
+        const cards = getStoredList();
+        setBooks(cards)
+    }, [])
     // console.log(books)
 
-    // const handleShortData = short =>{
-    //     if(short === 'rating'){
-    //         let ratingShort = books.rating.sort((a,b) => a-b);
-    //         setBooks(ratingShort)
-    //     }
-    // }
+    const handleShortData = short =>{
+        if(short === 'Rating'){
+            let ratingShort = books.sort((a,b) => a.rating - b.rating);
+            setBooks(ratingShort)
+            console.log(ratingShort)
+        }
+    }
     // console.log(books)
 
     
@@ -36,7 +37,7 @@ const ListedBooks = () => {
                 <details className="dropdown">
                     <summary className="m-1 btn bg-[#23BE0A] text-white" >Short By</summary>
                     <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-                        <li ><a>Rating</a></li>
+                        <li onClick={()=>handleShortData('Rating')}><a>Rating</a></li>
                         <li><a>Number of Page</a></li>
                         <li><a>Publish year</a></li>
                     </ul>
