@@ -2,7 +2,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { getStoredList, saveStoredList, saveWishList } from "../Components";
 import { toast } from "react-toastify";
-import { useState } from "react";
 
 const CardDetails = () => {
     const cards = useLoaderData()

@@ -13,7 +13,7 @@ const SingCard = ({card,}) => {
 
     return (
         <Link to={`/cardDetails/${id}`}>
-            <div className="space-y-5 p-6  lg:w-full  rounded-md shadow-md dark:bg-gray-50 dark:text-gray-900">
+            <div className="space-y-5 p-6 w-screen   lg:w-full  rounded-md shadow-md dark:bg-gray-50 dark:text-gray-900">
                 <img src={image} alt="" className="object-cover object-center lg:w-full rounded-md h-72 dark:bg-gray-500" />
                 <div className="flex gap-10 ">
                     {tags.map(tag=> <div className="text-[#23BE0A] bg-[#edf5ed] rounded-full px-3">{tag}</div>)}
