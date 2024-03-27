@@ -4,13 +4,14 @@ import { getStoredList } from ".";
 import ReadBooksCard from "./ReadBooksCard";
 
 const ReadBooks = () => {
-    const [books, setBooks] = useState([])
+    const [books, setBooks] = useState([]);
+    
 
     useEffect(()=>{
         const stored = getStoredList();
         setBooks(stored);
     },[])
-    console.log(books)
+    // console.log(books)
     return (
         <div className="space-y-4">
            {

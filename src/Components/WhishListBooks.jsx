@@ -10,7 +10,7 @@ const WhishListBooks = () => {
         const stored = getWishList();
         setBooks(stored);
     },[])
-    console.log(books)
+    // console.log(books)
 
     return (
         <div>

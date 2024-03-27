@@ -34,7 +34,8 @@ const router = createBrowserRouter([
      
       {
         path:'/readPage',
-        element:<ReadPages></ReadPages>
+        element:<ReadPages></ReadPages>,
+        loader:()=> fetch('/data.json')
       },
       {
         path:'/marketing',

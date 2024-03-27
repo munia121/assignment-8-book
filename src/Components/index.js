@@ -42,7 +42,7 @@ export const saveWishList = (book) =>{
     }
     storedList.push(book);
     localStorage.setItem('wish books',JSON.stringify(storedList))
-    toast.success('Add Read books')
+    toast.success('Add wish books')
 }
 
 

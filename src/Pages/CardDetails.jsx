@@ -1,6 +1,8 @@
 /* eslint-disable react/jsx-key */
 import { useLoaderData, useParams } from "react-router-dom";
-import { saveStoredList, saveWishList } from "../Components";
+import { getStoredList, saveStoredList, saveWishList } from "../Components";
+import { toast } from "react-toastify";
+import { useState } from "react";
 
 const CardDetails = () => {
     const cards = useLoaderData()
@@ -9,6 +11,7 @@ const CardDetails = () => {
     let card = cards.find(card => card.id === idInt);
     const { author, bookName, category, image, publisher, rating, review, tags, totalPages, yearOfPublishing } = card;
 
+   
 
     const handleReadListBooks = (book) =>{
         saveStoredList(book)
@@ -16,9 +19,14 @@ const CardDetails = () => {
 
 
     const handleWishedListBook = (book) =>{
+        const readBook = getStoredList();
+        const readData = readBook.find(read=>read.id === book.id)
+        if(readData){
+            toast.warning('already book read');
+            return;
+        }
         saveWishList(book)
     }
-
 
 
     return (
@@ -32,7 +40,7 @@ const CardDetails = () => {
                         <hr />
                         <p>{category}</p>
                         <hr />
-                        <p className="py-6"><span className="font-bold">Review:</span> {review}</p>
+                        <p className="py-6"><span className= "font-bold">Review:</span> {review}</p>
                         <p className="flex gap-4">Tags: {tags.map(tag => <div className="text-green-500">#{tag}</div>)}</p>
                         <hr />
                         <div className="space-y-4">
