@@ -18,7 +18,7 @@ export const saveStoredList = (book) =>{
     }
     storedList.push(book);
     localStorage.setItem('read books',JSON.stringify(storedList))
-    toast.success('Add Read books')
+    toast.success('Books Added To Read List')
 }
 
 
@@ -38,11 +38,11 @@ export const saveWishList = (book) =>{
     const storedList = getWishList();
     const exists = storedList.find(b => b.id === book.id);
     if(exists){
-        return toast.warn('already exist')
+        return toast.warn('You have already read this book')
     }
     storedList.push(book);
     localStorage.setItem('wish books',JSON.stringify(storedList))
-    toast.success('Add wish books')
+    toast.success('Book Added wish List')
 }
 
 

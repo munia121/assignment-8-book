@@ -21,7 +21,7 @@ const CardDetails = () => {
         const readBook = getStoredList();
         const readData = readBook.find(read=>read.id === book.id)
         if(readData){
-            toast.warning('already book read');
+            toast.warn('You have Already Read This Book');
             return;
         }
         saveWishList(book)
@@ -37,10 +37,10 @@ const CardDetails = () => {
                         <h1 className="text-4xl font-bold">{bookName}</h1>
                         <p className="text-xl">By: {author}</p>
                         <hr />
-                        <p>{category}</p>
+                        <p className="font-bold">{category}</p>
                         <hr />
                         <p className="py-6"><span className= "font-bold">Review:</span> {review}</p>
-                        <p className="flex gap-4">Tags: {tags.map(tag => <div className="text-green-500">#{tag}</div>)}</p>
+                        <p className="flex gap-4"><span className="font-bold">Tags:</span> {tags.map(tag => <div className="text-green-500">#{tag}</div>)}</p>
                         <hr />
                         <div className="space-y-4">
                             <p className="">Number of page: <span className="ml-7">{totalPages}</span></p>

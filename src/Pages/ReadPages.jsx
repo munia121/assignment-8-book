@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
-import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Tooltip } from 'recharts';
 import { getStoredList } from '../Components';
 
 
@@ -42,14 +42,15 @@ const ReadPages = () => {
 
     return (
         <div className='flex justify-center mt-20'>
-            {/* <ResponsiveContainer width={'100% '} height={'100%'}> */}
-                <BarChart width={800} height={300} data={localData}>
+            <ResponsiveContainer width={'100%'} height={500}>
+                <BarChart  data={localData}>
                     <XAxis dataKey="bookName" />
                     <YAxis />
+                    <Tooltip></Tooltip>
                     <Bar dataKey="totalPages" fill="#8884d8"
                         shape={<TriangleBar />} />
                 </BarChart>
-            {/* </ResponsiveContainer> */}
+            </ResponsiveContainer>
 
         </div>
     );
